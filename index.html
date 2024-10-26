@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <div class="sm:flex sm:justify-center sm:items-center sm:bg-[#36384e] min-h-screen">
+    <div id="form"
+      class="flex sm:flex-row flex-col-reverse md:gap-8 sm:gap-4 gap-8 bg-white md:p-6 sm:p-4 pb-4 sm:rounded-3xl">
+      <div class="flex flex-col justify-center items-start md:gap-4 sm:gap-2 gap-4 sm:max-w-md md:px-8 px-4">
+        <p class="text-[#242742] text-4xl font-bold">Stay updated!</p>
+        <p class="sm:text-base text-sm text-[#242742]">Join 60,000+ product managers receiving monthly updates on:</p>
+        <div class="flex flex-col gap-2 text-base text-[#242742]">
+          <div class="flex md:gap-4 gap-2 md:text-base text-sm">
+            <img src="./assets/images/icon-list.svg" alt="icon list">
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="flex md:gap-4 gap-2 md:text-base text-sm">
+            <img src="./assets/images/icon-list.svg" alt="icon list">
+            <p>Mesuring to ensure updates are a success</p>
+          </div>
+          <div class="flex md:gap-4 gap-2 md:text-base text-sm">
+            <img src="./assets/images/icon-list.svg" alt="icon list">
+            <p>And much more!</p>
+          </div>
+        </div>
+        <div class="flex flex-col w-full gap-2">
+          <div class="flex justify-between items-center">
+            <label for="email" class="sm:text-sm sm:font-bold">Email address</label>
+            <p id="error-text" class="text-sm font-bold text-red-500 hidden">Valid email required</p>
+          </div>
+          <input type="text" autocomplete="off" id="email"
+            class="text-[#242742] border-2 h-12 rounded-lg py-4 px-6 outline-[#242742]" placeholder="email@company.com"
+            spellcheck="false">
+        </div>
+        <button id="submit-btn"
+          class="text-white bg-[#242742] py-3 w-full rounded-lg lg:hover:bg-gradient-to-r lg:hover:from-[#f44f75] lg:hover:to-[#ff6257] lg:hover:shadow-[#ff6257bd] lg:hover:shadow-lg">Subscribe
+          to monthly newsletter</button>
+      </div>
+      <div class="sm:max-w-72">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="sign up illustration" class="hidden sm:block">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="sign up illustration" class="sm:hidden w-full">
+      </div>
+    </div>
+    <div id="success-box"
+      class="flex flex-col bg-white max-w-md sm:p-12 p-6 sm:rounded-3xl gap-6 sm:h-auto h-screen justify-center hidden">
+      <img src="assets/images/icon-success.svg" alt="icon success" class="w-12">
+      <p class="text-[#242742] text-4xl font-bold">Thanks for subscribing!</p>
+      <p class="text-[#242742] text-base">A confirmation emails has been sent to <span id="email-placeholder"
+          class="font-bold">undefined</span>. Please open it
+        and click the button inside to
+        confirm your subscription.</p>
+      <button id="dismiss-btn"
+        class="text-white bg-[#242742] py-3 rounded-lg lg:hover:bg-gradient-to-r lg:hover:from-[#f44f75] lg:hover:to-[#ff6257] lg:hover:shadow-[#ff6257bd] lg:hover:shadow-lg">Dismiss
+        message</button>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+
+</html>
